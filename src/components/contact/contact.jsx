@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
@@ -12,11 +12,34 @@ const Contact = () => {
     message: "",
   });
 
+  // Clear status message after 3 seconds
+  useEffect(() => {
+    if (status.message) {
+      const timer = setTimeout(() => {
+        setStatus({ type: "", message: "" });
+      }, 3000);
+
+      // Cleanup timer
+      return () => clearTimeout(timer);
+    }
+  }, [status.message]);
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.id]: e.target.value,
-    });
+    const { id, value } = e.target;
+    
+    // Prevent spaces in name field
+    if (id === 'name') {
+      const noSpaces = value.replace(/\s/g, '');
+      setFormData({
+        ...formData,
+        [id]: noSpaces,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [id]: value,
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -59,7 +82,7 @@ const Contact = () => {
       )}
       <form className={styles.contactForm} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Name (no spaces allowed)</label>
           <input
             type="text"
             id="name"
