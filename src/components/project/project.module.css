@@ -1,0 +1,79 @@
+.ProjectSection {
+    margin-top: 10rem;
+    padding: 55px 10%;
+    margin-bottom: 10rem;
+}
+
+.title {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #d3b3d7fc;
+}
+
+.description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #b1b1b1;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.projectSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 90%;
+    align-items: center;
+  }
+  
+  .projectLeft {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .projectImage {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .projectRight {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .projectTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d4add8fc;
+    margin-bottom: 1rem;
+  }
+  
+  .projectDescription {
+    font-size: 1rem;
+    color: #b1b1b1;
+    margin-bottom: 2rem;
+  }
+
+  .projectLeft{
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .projectLeft:hover{
+    transform: scale(1.01);
+    opacity: 0.7;
+    
+  }
+  

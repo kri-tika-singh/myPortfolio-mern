@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 40px;
+    box-shadow: 0px 4px 8px rgba(166, 35, 178, 0.1);
+    font-family: Arial, sans-serif;
+    color: grey;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000; 
+}
+
+.logoSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profileImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #C874B2;
+}
+
+.brandName {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5c295e;
+}
+
+.navbar a {
+    text-decoration: none; 
+    color: #766b6b;
+  }
+.navbar a:hover{
+    color: #963db3;
+    transition: color 0.3s ease;
+}
+.links {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #766b6b;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.links div:hover {
+    color: #963db3;
+    transition: color 0.3s ease;
+}
+

@@ -1,0 +1,42 @@
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 80vh; 
+    margin-top: 0%;
+}
+
+.heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #c0b3b3;
+    max-width: 700px; /* Restrict text width */
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.button {
+    background-color: #6b46c1; /* Purple color */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #553c9a; /* Darker purple on hover */
+    transform: scale(1.05);
+}
